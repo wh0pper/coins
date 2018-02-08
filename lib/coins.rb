@@ -23,4 +23,42 @@ class Coins
     @cents_remaining %= 5
     nickels
   end
+
+  def pennies
+    pennies = @cents_remaining
+    @cents_remaining = 0
+    pennies
+  end
+
+  def output
+    qs = quarters()
+    output = qs.to_s
+    if qs>1
+      output += ' quarters, '
+    else
+      output += ' quarter, '
+    end
+    ds = dimes()
+    output += ds.to_s
+    if ds>1
+      output += ' dimes, '
+    else
+      output += ' dime, '
+    end
+    ns = nickels()
+    output += ns.to_s
+    if ns>1
+      output += ' nickels, '
+    else
+      output += ' nickel, '
+    end
+    ps = pennies()
+    output += ps.to_s
+    if ps>1
+      output += ' pennies'
+    else
+      output += ' penny'
+    end
+    output
+  end
 end

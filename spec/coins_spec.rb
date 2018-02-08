@@ -30,10 +30,16 @@ describe('Coins') do
     end
   end
 
-  # describe('#pennies') do
-  #   it ('returns number of pennies in total amount') do
-  #     coins = Coins.new(75)
-  #     expect(coins.quarters()).to(eq(3))
-  #   end
-  # end
+  describe('#pennies') do
+    it ('returns number of pennies in total amount') do
+      expect(coins.pennies()).to(eq(2))
+    end
+  end
+
+  describe('#output') do
+    output_test = Coins.new(92)
+    it ('returns string based on all calculated amounts') do
+      expect(output_test.output()).to(eq("3 quarters, 1 dime, 1 nickel, 2 pennies"))
+    end
+  end
 end
