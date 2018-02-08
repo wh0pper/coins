@@ -32,33 +32,30 @@ class Coins
   end
 
   def output
-    binding.pry
     qs = quarters()
     output = qs.to_s
-    binding.pry
-    if qs>1
+    if qs != 1
       output += ' quarters, '
     else
       output += ' quarter, '
     end
     ds = dimes()
     output += ds.to_s
-    binding.pry
-    if ds>1
+    if ds != 1
       output += ' dimes, '
     else
       output += ' dime, '
     end
     ns = nickels()
     output += ns.to_s
-    if ns>1
+    if ns != 1
       output += ' nickels, '
     else
       output += ' nickel, '
     end
     ps = pennies()
     output += ps.to_s
-    if ps>1
+    if ps != 1
       output += ' pennies'
     else
       output += ' penny'

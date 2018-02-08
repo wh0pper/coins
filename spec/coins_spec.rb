@@ -11,8 +11,6 @@ describe('Coins') do
     end
   end
 
-
-
   coins = Coins.new(92)
   describe('#quarters') do
     it ('returns number of quarters in total amount') do
