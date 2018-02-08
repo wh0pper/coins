@@ -11,28 +11,31 @@ describe('Coins') do
     end
   end
 
-  coins = Coins.new(92)
   describe('#quarters') do
+    coins = Coins.new(92)
     it ('returns number of quarters in total amount') do
       expect(coins.quarters()).to(eq(3))
     end
   end
 
   describe('#dimes') do
+    coins = Coins.new(92)
     it ('returns number of dimes in total amount') do
-      expect(coins.dimes()).to(eq(1))
+      expect(coins.dimes()).to(eq(9))
     end
   end
 
   describe('#nickels') do
+    coins = Coins.new(92)
     it ('returns number of nickels in total amount') do
-      expect(coins.nickels()).to(eq(1))
+      expect(coins.nickels()).to(eq(18))
     end
   end
 
   describe('#pennies') do
+    coins = Coins.new(92)
     it ('returns number of pennies in total amount') do
-      expect(coins.pennies()).to(eq(2))
+      expect(coins.pennies()).to(eq(92))
     end
   end
 
