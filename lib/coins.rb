@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require('pry')
 
 class Coins
   # new lines in class block?
@@ -7,32 +8,34 @@ class Coins
   end
 
   def quarters
-    quarters = @cents_remaining/25
+    qs = @cents_remaining/25
     @cents_remaining %= 25
-    quarters
+    qs
   end
 
   def dimes
-    dimes = @cents_remaining/10
+    ds = @cents_remaining/10
     @cents_remaining %= 10
-    dimes
+    ds
   end
 
   def nickels
-    nickels = @cents_remaining/5
+    ns = @cents_remaining/5
     @cents_remaining %= 5
-    nickels
+    ns
   end
 
   def pennies
-    pennies = @cents_remaining
+    ps = @cents_remaining
     @cents_remaining = 0
-    pennies
+    ps
   end
 
   def output
+    binding.pry
     qs = quarters()
     output = qs.to_s
+    binding.pry
     if qs>1
       output += ' quarters, '
     else
@@ -40,6 +43,7 @@ class Coins
     end
     ds = dimes()
     output += ds.to_s
+    binding.pry
     if ds>1
       output += ' dimes, '
     else

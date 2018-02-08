@@ -11,6 +11,8 @@ describe('Coins') do
     end
   end
 
+
+
   coins = Coins.new(92)
   describe('#quarters') do
     it ('returns number of quarters in total amount') do
@@ -37,9 +39,9 @@ describe('Coins') do
   end
 
   describe('#output') do
-    output_test = Coins.new(92)
+    coins = Coins.new(92)
     it ('returns string based on all calculated amounts') do
-      expect(output_test.output()).to(eq("3 quarters, 1 dime, 1 nickel, 2 pennies"))
+      expect(coins.output()).to(eq("3 quarters, 1 dime, 1 nickel, 2 pennies"))
     end
   end
 end
